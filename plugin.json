@@ -1,7 +1,7 @@
 {
 
   "name" : "inContactCor",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags": "Windows",
