@@ -9,16 +9,33 @@
   "icon": "icon.png",
   "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\get-counters.ps1",
   "metrics": [
-    "INC_PROCESSOR_PERCENT_PROCESSOR_TIME",
-    "INC_PROCESSING_THREADS_BLOCKING",
-    "INC_ACTIONS_PER_SECOND",
-    "INC_BUSINESS_UNITS_THROTTLED",
-    "INC_PROCESSING_THREADS",
-    "INC_PROCESSING_THREADS_BUSY",
-    "INC_SQL_EXECUTE_TIME_AVERAGE",
-    "INC_TOTAL_CALLS",
-    "INC_TOTAL_SCRIPTS",
-    "INC_TOTAL_SESSIONS",
-    "INC_TOTAL_VOICE_PROVIDERS"
+  	"INC_PROCESSOR_PERCENT_PROCESSOR_TIME",
+    "INC_PROCESSING_THREADS_BLOCKING"
+  ],
+  "paramSchema": [
+    {
+      "title": "counters",
+      "description": "This parameter contains the array of paths to each counter you want this plugin to retrieve.",
+      "type": "array",
+      "items": "string",
+      "default": "\\processor(_total)\\% processor time,\\UCN Virtual Cluster\\Processing Threads Blocking",
+      "required": true
+    },
+    {
+      "title" : "metrics",
+      "description" : "This parameter contains the unique identifier of each collected counter as it will be identified in pulse.",
+      "type": "array",
+      "items": "string",
+      "default": "INC_PROCESSOR_PERCENT_PROCESSOR_TIME,INC_PROCESSING_THREADS_BLOCKING",
+      "required" : true
+    },
+    {
+      "title" : "multipliers",
+      "description" : "This parameter contains the multipliers for each counter that is collected.",
+      "type": "array",
+      "items": "string",
+      "default": "0.01,0.01",
+      "required" : true
+    }
   ]
 }
