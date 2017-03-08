@@ -39,5 +39,6 @@ foreach ($counter in $fcounters) {
 while($true)
 {
     Write-Host "some_metric_id" "123" $hostname
+    [Console]::Error.WriteLine("some_metric_id" "123" $hostname)
     Start-Sleep -m 1000
 }
