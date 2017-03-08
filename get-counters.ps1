@@ -4,7 +4,7 @@
 
 $JSON = '
 {
-   "name": "some_metric_id",
+   "name": "SOME_METRIC_ID2",
    "description": "Windows Performance Counter",
    "displayName": "Metric Name",
    "displayNameShort": "metname",
@@ -45,7 +45,7 @@ foreach ($counter in $fcounters) {
 # Continuously loop collecting metrics from the Windows Performance Counters
 while($true)
 {
-    Write-Host "SOME_METRIC_ID" "123" $hostname
-    [Console]::Error.WriteLine("SOME_METRIC_ID 123 $hostname")
+    Write-Host "SOME_METRIC_ID2" "123" $hostname
+    [Console]::Error.WriteLine("SOME_METRIC_ID2 123 $hostname")
     Start-Sleep -m 1000
 }
