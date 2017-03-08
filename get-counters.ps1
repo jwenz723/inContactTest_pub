@@ -22,13 +22,6 @@ foreach ($counter in $fcounters) {
 # Continuously loop collecting metrics from the Windows Performance Counters
 while($true)
 {
-    $counters = Get-Counter -Counter $fcounters
-    #$timestamp = [math]::Round((Get-Date -Date (Get-Date).toUniversalTime() -UFormat %s))
-    $samples = $counters.CounterSamples
-    foreach ($s in $samples) {
-        $value = $s.CookedValue * $multipliers[$s.path]
-        $metric_id = $metric_ids[($s.path).toUpper()]
-        Write-Host "some_metric_id" $value $hostname
-    }
+    Write-Host "some_metric_id" "123" $hostname
     Start-Sleep -m 1000
 }
