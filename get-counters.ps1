@@ -28,7 +28,7 @@ while($true)
     foreach ($s in $samples) {
         $value = $s.CookedValue * $multipliers[$s.path]
         $metric_id = $metric_ids[($s.path).toUpper()]
-        Write-Host $metric_id $value $hostname
+        Write-Host "some_metric_id" $value $hostname
     }
     Start-Sleep -m 1000
 }
