@@ -1,0 +1,24 @@
+{
+
+  "name" : "inContactCor",
+  "version": "0.0.1",
+  "meterVersionRequired" : "4.2.0-611",
+  "unsupportedPlatforms" : [ ],
+  "tags": "Windows",
+  "description": "Extracts InContact metrics for cor servers from Windows Performance Counters",
+  "icon": "icon.png",
+  "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\get-counters.ps1",
+  "metrics": [
+    "INC_PROCESSOR_PERCENT_PROCESSOR_TIME",
+    "INC_PROCESSING_THREADS_BLOCKING",
+    "INC_ACTIONS_PER_SECOND",
+    "INC_BUSINESS_UNITS_THROTTLED",
+    "INC_PROCESSING_THREADS",
+    "INC_PROCESSING_THREADS_BUSY",
+    "INC_SQL_EXECUTE_TIME_AVERAGE",
+    "INC_TOTAL_CALLS",
+    "INC_TOTAL_SCRIPTS",
+    "INC_TOTAL_SESSIONS",
+    "INC_TOTAL_VOICE_PROVIDERS"
+  ]
+}

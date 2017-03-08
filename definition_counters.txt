@@ -1,0 +1,11 @@
+\processor(_total)\% processor time
+\UCN Virtual Cluster\Processing Threads Blocking
+\UCN Virtual Cluster\Actions Per Second
+\UCN Virtual Cluster\Business Units Throttled
+\UCN Virtual Cluster\Processing Threads
+\UCN Virtual Cluster\Processing Threads Busy
+\ucn virtual cluster\sql execute time average
+\ucn virtual cluster\total Calls
+\ucn virtual cluster\total Scripts
+\ucn virtual cluster\total Sessions
+\ucn virtual cluster\total voice providers

@@ -1,0 +1,90 @@
+{
+  "INC_PROCESSOR_PERCENT_PROCESSOR_TIME": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Percentage of CPU used",
+    "displayName": "Processor % Time",
+    "displayNameShort": "Proc % Time",
+    "unit": "percent"
+  },
+  "INC_PROCESSING_THREADS_BLOCKING": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Processing Threads Blocking",
+    "displayName": "Processing Threads Blocking",
+    "displayNameShort": "Processing Threads Blocking",
+    "unit": "number"
+  },
+  "INC_ACTIONS_PER_SECOND": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Actions Per Second",
+    "displayName": "Actions Per Second",
+    "displayNameShort": "Actions Per Second",
+    "unit": "number"
+  },
+  "INC_BUSINESS_UNITS_THROTTLED": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "",
+    "displayName": "Business Units Throttled",
+    "displayNameShort": "Business Units Throttled",
+    "unit": "number"
+  },
+  "INC_PROCESSING_THREADS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "",
+    "displayName": "UNC Processing Threads",
+    "displayNameShort": "Processing Threads",
+    "unit": "number"
+  },
+ "INC_PROCESSING_THREADS_BUSY": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Processing Threads Busy",
+    "displayName": "Processing Threads Busy",
+    "displayNameShort": "Processing Threads Busy",
+    "unit": "number"
+  },
+ "INC_SQL_EXECUTE_TIME_AVERAGE": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "SQL Execute Time",
+    "displayName": "SQL Execute Time",
+    "displayNameShort": "SQL Execute Time",
+    "unit": "number"
+  },
+ "INC_TOTAL_CALLS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Incontact Total Calls",
+    "displayName": "Incontact Total Calls",
+    "displayNameShort": "Total Calls",
+    "unit": "number"
+  },
+ "INC_TOTAL_SCRIPTS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Incontact Total Scripts",
+    "displayName": "Incontact Total Scripts",
+    "displayNameShort": "Total Scripts",
+    "unit": "number"
+  },
+ "INC_TOTAL_SESSIONS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Incontact Total Sessions",
+    "displayName": "Incontact Total Sessions",
+    "displayNameShort": "Total Sessions",
+    "unit": "number"
+  },
+ "INC_TOTAL_VOICE_PROVIDERS": {
+    "defaultAggregate": "AVG",
+    "defaultResolutionMS": 1000,
+    "description": "Total Voice Providers",
+    "displayName": "Total Voice Providers",
+    "displayNameShort": "Total Voice Providers",
+    "unit": "number"
+  }
+}
