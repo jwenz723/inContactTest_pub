@@ -1,13 +1,13 @@
 {
 
   "name" : "inContactTest",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags": "Windows",
   "description": "Extracts InContact metrics from Windows Performance Counters",
   "icon": "icon.png",
-  "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\get-counters.ps1",
+  "command": "PulsePlugin_Perfmon.exe",
   "metrics": [],
   "paramArray": {
     "itemTitle": [
