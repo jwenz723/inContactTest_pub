@@ -1,7 +1,7 @@
 {
 
   "name" : "inContactTest",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags": "Windows",
@@ -11,9 +11,9 @@
   "metrics": [],
   "paramArray": {
     "itemTitle": [
-      "metricName"
+      "metric_name"
     ],
-    "schemaTitle": "metric_name"
+    "schemaTitle": "Counter"
   },
   "paramSchema": [
     {
