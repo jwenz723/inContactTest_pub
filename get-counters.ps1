@@ -1,12 +1,24 @@
-$JSON = '
-{
-   "name": "SOME_METRIC_ID2",
-   "description": "Windows Performance Counter",
-   "displayName": "Metric Name",
-   "displayNameShort": "metname",
-   "unit": "number",
-   "defaultAggregate": "avg"
-}'
+#$JSON = '
+#{
+#   "name": "SOME_METRIC_ID2",
+#   "description": "Windows Performance Counter",
+#   "displayName": "Metric Name",
+#   "displayNameShort": "metname",
+#   "unit": "number",
+#   "defaultAggregate": "avg"
+#}'
+
+$scriptpath = $MyInvocation.MyCommand.Path
+$dir = Split-Path $scriptpath
+echo "My directory is" $dir
+$jsonConfig = Get-Content D:\pulse\inContactTest_pub\param.json
+
+[System.Reflection.Assembly]::LoadWithPartialName("System.Web.Extensions")
+$ser = New-Object System.Web.Script.Serialization.JavaScriptSerializer
+$obj = $ser.DeserializeObject($jsonConfig)
+
+[Console]::Error.WriteLine($obj)
+
 
 $pair = "jwenz723@gmail.com:59247fb2-727c-45e2-a2a2-e35f66f80b3a"
 $bytes = [System.Text.Encoding]::ASCII.GetBytes($pair)
