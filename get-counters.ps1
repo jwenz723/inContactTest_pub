@@ -10,7 +10,7 @@
 
 $scriptpath = $MyInvocation.MyCommand.Path
 $dir = Split-Path $scriptpath
-$jsonConfig = Get-Content D:\pulse\inContactTest_pub\param.json
+$jsonConfig = Get-Content $dir\param.json
 
 [System.Reflection.Assembly]::LoadWithPartialName("System.Web.Extensions")
 $ser = New-Object System.Web.Script.Serialization.JavaScriptSerializer
