@@ -1,7 +1,7 @@
 {
 
   "name" : "inContactTest",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags": "Windows",
@@ -17,55 +17,71 @@
   },
   "paramSchema": [
     {
-      "title": "Metric Name",
+      "title": "Name",
       "name": "displayName",
-      "description": "The 'Name' of the metric in Pulse that will contain data for this perf counter.",
+      "description": "The 'Name' that will be stored in Pulse for this metric.",
       "type": "string",
       "required": true
     },
     {
-      "title": "Metric Short Name",
+      "title": "Short Name",
       "name": "displayNameShort",
-      "description": "The 'Short name' of the metric in Pulse that will contain data for this perf counter.",
+      "description": "The 'Short name' that will be stored in Pulse for this metric.",
       "type": "string",
       "required": true
     },
     {
-      "title": "Metric Identifier",
+      "title": "Identifier",
       "name": "name",
-      "description": "The 'Identifier' of the metric in Pulse that will contain data for this perf counter. You must manually create a metric before entering this definition here.",
+      "description": "The 'Identifier' that will be stored in Pulse for this metric.",
       "type": "string",
+      "required": true
+    },
+    {
+      "title": "Description",
+      "name": "description",
+      "description": "The 'Description' that will be stored in Pulse for this metric.",
+      "type": "string",
+      "default": "Windows Performance Counter",
       "required": true
     },
     {
       "title": "Unit",
       "name": "type",
-      "description": "Select",
+      "description": "The 'Unit' that will be stored in Pulse for this metric.",
       "type": { "enum" : [["Count of bytes", "bytecount"], ["Duration", "duration"], ["Number", "number"], ["Percentage", "percentage"]]},
       "default": "number",
       "required": true
     },
     {
+      "title": "Default Aggregate",
+      "name": "defaultAggregate",
+      "description": "When graphing (or grouping at the 1 second interval) the aggregate function that makes most sense for this metric. Can be sum, avg, max, or min.",
+      "type": { "enum" : [["Average", "avg"], ["Maximum", "max"], ["Minimum", "min"], ["Sum", "sum"]]},
+      "default": "avg",
+      "required": true
+    },
+    {
+      "title": "Default Resolution",
+      "name": "defaultResolutionMS",
+      "description": "How often you want to collect this performance counter (in milliseconds). Default: 1000",
+      "type": "string",
+      "default": "1000",
+      "required": true
+    },
+    {
       "title": "Counter Path",
       "name": "counter_path",
-      "description": "The full windows performance counter path",
+      "description": "The full path to the windows performance counter to collect.",
       "type": "string",
       "required": true
     },
     {
       "title": "Multiplier",
       "name": "multiplier",
-      "description": "An integer value to multiply the counter value by. Default: 1",
+      "description": "A decimal value to multiply the counter value by. Default: 1",
       "type": "string",
-      "default": 1,
-      "required": true
-    },
-    {
-      "title": "Poll Interval",
-      "name": "defaultResolutionMS",
-      "description": "How often you want to collect this performance counter (in milliseconds). Default: 1000",
-      "type": "string",
-      "default": 1000,
+      "default": "1.0",
       "required": true
     }
   ]
