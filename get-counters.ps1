@@ -34,16 +34,37 @@ foreach ($item in $obj.items) {
        "defaultAggregate": "avg"
     }'
 
+    $URI1 = "https://api.truesight.bmc.com/v1/metrics"
+    $request = [System.Net.WebRequest]::Create($URI1)
+    $request.ContentType = "application/json"
+    $request.Method = "POST"
+    $request.Headers.Add("Authorization", "$basicAuthValue")
+    # $request | Get-Member  for a list of methods and properties 
 
-    Try
+    try
     {
-        $output = Invoke-WebRequest -Uri https://api.truesight.bmc.com/v1/metrics -Method POST -Body $JSON -Headers @{Authorization = "$basicAuthValue"} -ContentType 'application/json'  
-        echo "created metric"
+        $requestStream = $request.GetRequestStream()
+        $streamWriter = New-Object System.IO.StreamWriter($requestStream)
+        $streamWriter.Write($body)
     }
-    Catch
+
+    finally
     {
-        echo "error " $Error
+        if ($null -ne $streamWriter) { $streamWriter.Dispose() }
+        if ($null -ne $requestStream) { $requestStream.Dispose() }
     }
+
+    $res = $request.GetResponse()
+    
+    #Try
+    #{
+    #    $output = Invoke-WebRequest -Uri https://api.truesight.bmc.com/v1/metrics -Method POST -Body $JSON -Headers @{Authorization = "$basicAuthValue"} -ContentType 'application/json'  
+    #    echo "created metric"
+    #}
+    #Catch
+    #{
+    #    echo "error " $Error
+    #}
 }
 
 return

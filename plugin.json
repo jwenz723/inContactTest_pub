@@ -38,8 +38,8 @@
       "required": true
     },
     {
-      "title": "Counter",
-      "name": "counter",
+      "title": "Counter Path",
+      "name": "counter_path",
       "description": "The full windows performance counter path",
       "type": "string",
       "required": true

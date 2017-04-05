@@ -1,15 +1,1 @@
-{
-  "items":[
-    {
-      "metric":"TESTJEFF",
-      "counter":"this is a counter",
-      "multiplier":"1"
-    },
-    {
-      "metric":"TESTJEFF2",
-      "counter":"Number 2",
-      "multiplier":"2"
-    }
-  ],
-  "pollInterval":500
-}
+{}
