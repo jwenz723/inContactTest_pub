@@ -10,7 +10,6 @@
 
 $scriptpath = $MyInvocation.MyCommand.Path
 $dir = Split-Path $scriptpath
-echo "My directory is" $dir
 $jsonConfig = Get-Content D:\pulse\inContactTest_pub\param.json
 
 [System.Reflection.Assembly]::LoadWithPartialName("System.Web.Extensions")
@@ -19,6 +18,15 @@ $obj = $ser.DeserializeObject($jsonConfig)
 
 [Console]::Error.WriteLine($obj)
 
+foreach ($item in $obj.items) {
+    $metric = $item.metric
+    $counter = $item.counter
+    $multipler = $item.multiplier
+
+    throw [System.IO.FileNotFoundException] "Got $metric/$counter/$multipler"
+}
+
+return
 
 $pair = "jwenz723@gmail.com:59247fb2-727c-45e2-a2a2-e35f66f80b3a"
 $bytes = [System.Text.Encoding]::ASCII.GetBytes($pair)
