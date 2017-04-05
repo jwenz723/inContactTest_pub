@@ -15,7 +15,7 @@ $basicAuthValue = "Basic $base64"
 
 Try
 {
-    $output = Invoke-WebRequest -Uri https://api.truesight.bmc.com/v1/metrics -Method POST -Body $JSON -Headers @{Authorization = "$basicAuthValue"} -ContentType 'application/json'  
+    #$output = Invoke-WebRequest -Uri https://api.truesight.bmc.com/v1/metrics -Method POST -Body $JSON -Headers @{Authorization = "$basicAuthValue"} -ContentType 'application/json'  
 }
 Catch
 {
@@ -26,9 +26,9 @@ $hostname = Get-Content Env:\COMPUTERNAME
 
 
 # Continuously loop collecting metrics from the Windows Performance Counters
-while($true)
-{
-    Write-Host "SOME_METRIC_ID2" "123" $hostname
-    [Console]::Error.WriteLine("SOME_METRIC_ID2 123 $hostname")
-    Start-Sleep -m 1000
-}
+#while($true)
+#{
+#    Write-Host "SOME_METRIC_ID2" "123" $hostname
+#    [Console]::Error.WriteLine("SOME_METRIC_ID2 123 $hostname")
+#    Start-Sleep -m 1000
+#}

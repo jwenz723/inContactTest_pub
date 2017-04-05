@@ -1,38 +1,42 @@
 {
 
-  "name" : "inContactCor",
-  "version": "0.0.6",
+  "name" : "inContactTest",
+  "version": "0.0.1",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags": "Windows",
-  "description": "Extracts InContact metrics for cor servers from Windows Performance Counters",
+  "description": "Extracts InContact metrics from Windows Performance Counters",
   "icon": "icon.png",
   "command": "powershell -NoLogo -NonInteractive -Command Set-ExecutionPolicy RemoteSigned; .\\get-counters.ps1",
-  "metrics": [
-  	"INC_PROCESSOR_PERCENT_PROCESSOR_TIME",
-    "INC_PROCESSING_THREADS_BLOCKING"
-  ],
-  "paramSchema=": [
-    {
-      "title": "counters",
-      "description": "This parameter contains the array of paths to each counter you want this plugin to retrieve.",
+  "metrics": [],
+  "paramArray": {
+    "itemTitle": [
+      "source"
+    ],
+    "schemaTitle": "Host"
+  },
+  "paramSchema": [
+   {
+      "title": "Counter",
+      "name": "counter",
+      "description": "The full windows performance counter path",
       "type": "string",
-      "default": "\\processor(_total)\\% processor time,\\UCN Virtual Cluster\\Processing Threads Blocking",
       "required": true
     },
     {
-      "title" : "metrics",
-      "description" : "This parameter contains the unique identifier of each collected counter as it will be identified in pulse.",
+      "title": "Multiplier",
+      "name": "multiplier",
+      "description": "An integer value to multiply the counter value by. Default: 1",
       "type": "string",
-      "default": "INC_PROCESSOR_PERCENT_PROCESSOR_TIME,INC_PROCESSING_THREADS_BLOCKING",
-      "required" : true
+      "default": 1,
+      "required": true
     },
     {
-      "title" : "multipliers",
-      "description" : "This parameter contains the multipliers for each counter that is collected.",
+      "title": "Metric",
+      "name": "metric",
+      "description": "The ID of the metric in Pulse that will contain data for this perf counter. You must manually create a metric before entering this definition here.",
       "type": "string",
-      "default": "0.01,0.01",
-      "required" : true
+      "required": true
     }
   ]
 }
