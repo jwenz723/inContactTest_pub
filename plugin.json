@@ -1,7 +1,7 @@
 {
 
   "name" : "inContactTest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags": "Windows",
@@ -11,15 +11,29 @@
   "metrics": [],
   "paramArray": {
     "itemTitle": [
-      "metric"
+      "metricName"
     ],
     "schemaTitle": "Counter"
   },
   "paramSchema": [
     {
-      "title": "Metric",
-      "name": "metric",
-      "description": "The ID of the metric in Pulse that will contain data for this perf counter. You must manually create a metric before entering this definition here.",
+      "title": "Metric Name",
+      "name": "metric_name",
+      "description": "The 'Name' of the metric in Pulse that will contain data for this perf counter.",
+      "type": "string",
+      "required": true
+    },
+    {
+      "title": "Metric Short Name",
+      "name": "metric_short_name",
+      "description": "The 'Short name' of the metric in Pulse that will contain data for this perf counter.",
+      "type": "string",
+      "required": true
+    },
+    {
+      "title": "Metric Identifier",
+      "name": "metric_identifier",
+      "description": "The 'Identifier' of the metric in Pulse that will contain data for this perf counter. You must manually create a metric before entering this definition here.",
       "type": "string",
       "required": true
     },
