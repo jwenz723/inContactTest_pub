@@ -1,7 +1,7 @@
 {
 
   "name" : "inContactTest",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags": "Windows",
@@ -42,7 +42,7 @@
       "name": "type",
       "description": "Select",
       "type": { "enum" : [["Count of bytes", "bytecount"], ["Duration", "duration"], ["Number", "number"], ["Percentage", "percentage"]]},
-      "default": 1000,
+      "default": "number",
       "required": true
     },
     {
