@@ -1,7 +1,7 @@
 {
 
   "name" : "inContactTest",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags": "Windows",
@@ -11,30 +11,38 @@
   "metrics": [],
   "paramArray": {
     "itemTitle": [
-      "metric_name"
+      "displayName"
     ],
     "schemaTitle": "Counter"
   },
   "paramSchema": [
     {
       "title": "Metric Name",
-      "name": "metric_name",
+      "name": "displayName",
       "description": "The 'Name' of the metric in Pulse that will contain data for this perf counter.",
       "type": "string",
       "required": true
     },
     {
       "title": "Metric Short Name",
-      "name": "metric_short_name",
+      "name": "displayNameShort",
       "description": "The 'Short name' of the metric in Pulse that will contain data for this perf counter.",
       "type": "string",
       "required": true
     },
     {
       "title": "Metric Identifier",
-      "name": "metric_identifier",
+      "name": "name",
       "description": "The 'Identifier' of the metric in Pulse that will contain data for this perf counter. You must manually create a metric before entering this definition here.",
       "type": "string",
+      "required": true
+    },
+    {
+      "title": "Unit",
+      "name": "type",
+      "description": "Select",
+      "type": { "enum" : [["Count of bytes", "bytecount"], ["Duration", "duration"], ["Number", "number"], ["Percentage", "percentage"]]},
+      "default": 1000,
       "required": true
     },
     {
@@ -50,6 +58,14 @@
       "description": "An integer value to multiply the counter value by. Default: 1",
       "type": "string",
       "default": 1,
+      "required": true
+    },
+    {
+      "title": "Poll Interval",
+      "name": "defaultResolutionMS",
+      "description": "How often you want to collect this performance counter (in milliseconds). Default: 1000",
+      "type": "string",
+      "default": 1000,
       "required": true
     }
   ]
