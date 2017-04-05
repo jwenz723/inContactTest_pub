@@ -1,7 +1,7 @@
 {
 
   "name" : "inContactTest",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags": "Windows",
@@ -11,12 +11,19 @@
   "metrics": [],
   "paramArray": {
     "itemTitle": [
-      "source"
+      "metric"
     ],
-    "schemaTitle": "Host"
+    "schemaTitle": "Counter"
   },
   "paramSchema": [
-   {
+    {
+      "title": "Metric",
+      "name": "metric",
+      "description": "The ID of the metric in Pulse that will contain data for this perf counter. You must manually create a metric before entering this definition here.",
+      "type": "string",
+      "required": true
+    },
+    {
       "title": "Counter",
       "name": "counter",
       "description": "The full windows performance counter path",
@@ -29,13 +36,6 @@
       "description": "An integer value to multiply the counter value by. Default: 1",
       "type": "string",
       "default": 1,
-      "required": true
-    },
-    {
-      "title": "Metric",
-      "name": "metric",
-      "description": "The ID of the metric in Pulse that will contain data for this perf counter. You must manually create a metric before entering this definition here.",
-      "type": "string",
       "required": true
     }
   ]
