@@ -1,1 +1,10 @@
-{}
+{
+	"TESTMETRIC": {
+		"defaultAggregate": "avg",
+		"defaultResolutionMS": 1000,
+		"description": "Test description",
+		"displayName": "Test Metric",
+		"displayNameShort": "TestMet",
+		"unit": "number"
+	}
+}

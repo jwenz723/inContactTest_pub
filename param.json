@@ -1,1 +1,16 @@
-{}
+{
+  "items":[
+    {
+      "displayName":"Test Metric",
+      "displayNameShort":"TestMet",
+      "name":"TESTMETRIC",
+      "description":"A metric created for testing PulsePlugin_Perfmon.exe",
+      "unit":"number",
+      "defaultAggregate":"avg",
+      "defaultResolutionMS":"1000",
+      "counter_path":"\\Processor Information(_Total)\\% Processor Time",
+      "multiplier":"1.0"
+    }
+  ],
+  "pollInterval":500
+}

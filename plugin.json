@@ -8,7 +8,9 @@
   "description": "Extracts InContact metrics from Windows Performance Counters",
   "icon": "icon.png",
   "command": "PulsePlugin_Perfmon.exe",
-  "metrics": [],
+  "metrics": [
+    "TESTMETRIC"
+  ],
   "paramArray": {
     "itemTitle": [
       "displayName"
