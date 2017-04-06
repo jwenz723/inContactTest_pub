@@ -1,7 +1,7 @@
 {
 
   "name" : "inContactTest",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "meterVersionRequired" : "4.2.0-611",
   "unsupportedPlatforms" : [ ],
   "tags": "Windows",
